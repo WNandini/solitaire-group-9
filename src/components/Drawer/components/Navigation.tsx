@@ -11,6 +11,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import Divider from '@mui/material/Divider';
 import { Link } from 'react-router-dom';
+import {Tooltip} from '@mui/material';
 
 const CloseModal = React.lazy(() => import('../../CloseModal/CloseModal'));
 
@@ -39,15 +40,17 @@ const Navigation = ({ open }: NavigationProps): JSX.Element => {
                                 px: 2.5,
                             }}
                         >
-                            <ListItemIcon
-                                sx={{
-                                    minWidth: 0,
-                                    mr: open ? 3 : 'auto',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <HomeIcon />
-                            </ListItemIcon>
+                            <Tooltip title="Home" placement="right-start">
+                                <ListItemIcon
+                                    sx={{
+                                        minWidth: 0,
+                                        mr: open ? 3 : 'auto',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <HomeIcon />
+                                </ListItemIcon>
+                            </Tooltip>
                             <ListItemText primary={'Home'} sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
@@ -61,15 +64,17 @@ const Navigation = ({ open }: NavigationProps): JSX.Element => {
                                 px: 2.5,
                             }}
                         >
-                            <ListItemIcon
-                                sx={{
-                                    minWidth: 0,
-                                    mr: open ? 3 : 'auto',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <SettingsIcon />
-                            </ListItemIcon>
+                            <Tooltip title="Settings" placement="right-start">
+                                <ListItemIcon
+                                    sx={{
+                                        minWidth: 0,
+                                        mr: open ? 3 : 'auto',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <SettingsIcon />
+                                </ListItemIcon>
+                            </Tooltip>
                             <ListItemText primary={'Settings'} sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
@@ -83,15 +88,17 @@ const Navigation = ({ open }: NavigationProps): JSX.Element => {
                                 px: 2.5,
                             }}
                         >
-                            <ListItemIcon
-                                sx={{
-                                    minWidth: 0,
-                                    mr: open ? 3 : 'auto',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <MenuBookIcon />
-                            </ListItemIcon>
+                            <Tooltip title="Instruction" placement="right-start">
+                                <ListItemIcon
+                                    sx={{
+                                        minWidth: 0,
+                                        mr: open ? 3 : 'auto',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <MenuBookIcon />
+                                </ListItemIcon>
+                            </Tooltip>
                             <ListItemText primary={'Instructions'} sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
                     </ListItem>
@@ -109,15 +116,17 @@ const Navigation = ({ open }: NavigationProps): JSX.Element => {
                             px: 2.5,
                         }}
                     >
-                        <ListItemIcon
-                            sx={{
-                                minWidth: 0,
-                                mr: open ? 3 : 'auto',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <LogoutIcon />
-                        </ListItemIcon>
+                        <Tooltip title="Logout" placement="right-start">
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <LogoutIcon />
+                            </ListItemIcon>
+                        </Tooltip>
                         <ListItemText primary={'Logout'} sx={{ opacity: open ? 1 : 0 }} />
                     </ListItemButton>
                 </ListItem>

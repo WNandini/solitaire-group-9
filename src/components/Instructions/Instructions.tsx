@@ -32,6 +32,7 @@ const diffArray = [
 const StyledTypography = styled(Typography)(({ theme }) => ({
     marginBottom: theme.spacing(2),
     color: theme.palette.common.black,
+    fontSize: 16
 }));
 
 const Instructions = () => {
@@ -43,18 +44,18 @@ const Instructions = () => {
                 height: '100vh',
             }}
         >
-            <StyledTypography variant="h5">Instructions:</StyledTypography>
-            <StyledTypography variant="h6">
+            <StyledTypography variant="h5" sx={{fontWeight: 600}}>Instructions:</StyledTypography>
+            <StyledTypography>
                 Solitaire is a popular single player card game that has many variations. The most common version, also
                 known as Klondike, is played with a standard deck of 52 cards.
             </StyledTypography>
-            <StyledTypography variant="h6">
+            <StyledTypography>
                 The goal of the game is to move all of the cards from the tableau and foundation piles to the four
                 foundation piles at the top right of the game board, in order from Ace to King, by suit.
             </StyledTypography>
-            <Paper>
+            <Paper sx={{height: '50vh',overflowY: 'scroll'}}>
                 <Box p={2}>
-                    <Typography variant="h6">Here are the basic rules of Klondike solitaire:</Typography>
+                    <Typography variant="subtitle1" sx={{fontWeight: 600}}>Here are the basic rules of Klondike solitaire:</Typography>
                     <List>
                         {rulesArray.map((rule, i) => {
                             return (
@@ -67,7 +68,7 @@ const Instructions = () => {
                             );
                         })}
                     </List>
-                    <Typography variant="h6">
+                    <Typography variant="subtitle1" sx={{fontWeight: 600}}>
                         Here are some of the main differences between Vegas and Klondike rules for solitaire:
                     </Typography>
                     <List>

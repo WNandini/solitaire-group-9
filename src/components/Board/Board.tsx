@@ -55,7 +55,7 @@ const Board = (): JSX.Element => {
                 height: '100vh',
             }}
         >
-            <Grid container p={3} style={{ zoom: '60%', height: '120vh' }}>
+            <Grid container p={3} style={{ zoom: '45%', height: '120vh' }}>
                 <Grid
                     item
                     xs={2}
@@ -64,6 +64,7 @@ const Board = (): JSX.Element => {
                     alignItems="flex-start"
                     justifyContent="flex-start"
                     alignContent="center"
+                    padding='100px 30px'
                 >
                     <Deck
                         cardsArray={cards}
@@ -81,6 +82,7 @@ const Board = (): JSX.Element => {
                     justifyContent="flex-start"
                     alignContent="center"
                     mt={4}
+                    padding='100px 30px'
                 >
                     <Deck cardsArray={flippedCards} allowEmpty noShift />
                 </Grid>
@@ -94,6 +96,7 @@ const Board = (): JSX.Element => {
                     justifyContent="flex-end"
                     alignContent="center"
                     gap={3}
+                    padding='140px 30px'
                 >
                     <HomeCard showHomeBorder suitImage="♥" cardsArray={home1.cards as []} />
                     <HomeCard showHomeBorder suitImage="♣" cardsArray={home2.cards as []} />
